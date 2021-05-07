@@ -7,7 +7,7 @@ script:
     - docker images jordanmom/node2
 
 before_deploy:
-    - docker login -u jordanmom -p D3lt4/SSSS
+    - docker login -u  -p 
 
 deploy:
     provider: script
