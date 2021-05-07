@@ -5,3 +5,12 @@ service:
 script:
     - docker build -t jordanmom/node2 .
     - docker images jordanmom/node2
+
+before_deploy:
+    - docker login -u jordanmom -p D3lt4/SSSS
+
+deploy:
+    provider: script
+    script: docker push jordanmom/testnode
+    on:
+        branch: main
